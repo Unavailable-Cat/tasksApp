@@ -150,7 +150,7 @@ function App() {
         )}
 
         <footer className="mt-8 text-center text-xs text-slate-400">
-          Connected to localhost:8080
+            Hosted on Netlify
         </footer>
       </div>
     </div>
