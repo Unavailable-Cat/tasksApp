@@ -1,6 +1,6 @@
 import type { Task, TaskRequest } from '@/types';
 
-const BASE_URL = '/api';
+  const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 async function parseResponse<T>(res: Response): Promise<T> {
   if (res.status === 204 || res.status === 200) {
@@ -20,6 +20,7 @@ async function parseResponse<T>(res: Response): Promise<T> {
 }
 
 export async function getAllTasks(): Promise<Task[]> {
+  console.log(`${BASE_URL}/tasks`);
   const res = await fetch(`${BASE_URL}/tasks`);
   const data = await parseResponse<Task[]>(res);
   return data ?? [];
