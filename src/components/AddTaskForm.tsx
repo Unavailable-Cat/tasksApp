@@ -63,7 +63,7 @@ export function AddTaskForm({ onAdd }: AddTaskFormProps) {
         <textarea
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          placeholder="Description (optional)..."
+          placeholder="Description ..."
           rows={2}
           className="mt-3 w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-700 placeholder-slate-400 outline-none focus:border-teal-400 focus:bg-white"
           disabled={submitting}
