@@ -27,7 +27,7 @@ export async function getAllTasks(): Promise<Task[]> {
 }
 
 export async function getTask(id: string): Promise<Task> {
-  const res = await fetch(`${BASE_URL}/tasks/${id}`);
+  const res = await fetch(`${BASE_URL}tasks/${id}`);
   return parseResponse<Task>(res);
 }
 
